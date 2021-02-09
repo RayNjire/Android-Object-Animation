@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/IMGLogo"
+        android:layout_width="235dp"
+        android:layout_height="284dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        app:srcCompat="@drawable/wbball"
+        android:contentDescription = "@string/my_wba_logo"
+        />
+    
+    <Spinner
+        android:id="@+id/AnimationList"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="300dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
+
+
+    <Button
+        android:id = "@+id/BTNAnimate"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_alignParentBottom = "true"
+        android:layout_centerHorizontal = "true"
+        android:layout_marginBottom = "214dp"
+        android:fontFamily = "serif"
+        android:onClick = "onClick"
+        android:text = "@string/animate"
+        android:textSize = "24sp"
+        />
+
+</RelativeLayout>
