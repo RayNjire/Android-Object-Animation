@@ -1,8 +1,5 @@
 package raynjire.com.objectanimations;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -11,6 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener
 {
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         
         Spinner listAnimation = findViewById(R.id.AnimationList);
-        String[] items = new String[]{"Blinking Animation", "Bounce Animation", "Fade In Animation", "Fade Out Animation", "Object Move Animation", "Rotate Animation", "Sequential Animation", "Slide Up Animation", "Slide Down Animation", "Together Animation", "Zoom In Animation", "Zoom Out Animation"};
+        String[] items = new String[] {"Blinking Animation", "Bounce Animation", "Fade In Animation", "Fade Out Animation", "Object Move Animation", "Rotate Animation", "Sequential Animation", "Slide Up Animation", "Slide Down Animation", "Together Animation", "Zoom In Animation", "Zoom Out Animation"};
         
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         listAnimation.setAdapter(adapter);
@@ -39,90 +39,90 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             ImageView imgLogo = (ImageView) findViewById(R.id.IMGLogo);
             
-            switch (objClicked.getId())
+            switch(objClicked.getId())
             {
                 case R.id.BTNAnimate:
-                    switch (selectedAnimation)
+                    switch(selectedAnimation)
                     {
                         case "Blinking Animation":
-                            animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.blinking_animation);
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.blinking_animation);
                             imgLogo.startAnimation(animation);
                             
-                        break;
+                            break;
                         
                         case "Bounce Animation":
-                            animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.bounce_animation);
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.bounce_animation);
                             imgLogo.startAnimation(animation);
                             
-                        break;
+                            break;
                         
                         case "Fade In Animation":
-                            animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.fade_in_animation);
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_in_animation);
                             imgLogo.startAnimation(animation);
                             
-                        break;
+                            break;
                         
                         case "Fade Out Animation":
-                            animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.fade_out_animation);
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_out_animation);
                             imgLogo.startAnimation(animation);
                             
-                        break;
+                            break;
                         
                         case "Object Move Animation":
-                            animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.object_move_animation);
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.object_move_animation);
                             imgLogo.startAnimation(animation);
                             
-                        break;
+                            break;
                         
                         case "Rotate Animation":
-                            animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.rotate_animation);
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.rotate_animation);
                             imgLogo.startAnimation(animation);
                             
-                        break;
+                            break;
                         
                         case "Sequential Animation":
-                            animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.sequential_animation);
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.sequential_animation);
                             imgLogo.startAnimation(animation);
                             
-                        break;
+                            break;
                         
                         case "Slide Up Animation":
-                            animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.slide_up_animation);
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_up_animation);
                             imgLogo.startAnimation(animation);
                             
-                        break;
+                            break;
                         
                         case "Slide Down Animation":
-                            animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.slide_down_animation);
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_down_animation);
                             imgLogo.startAnimation(animation);
                             
-                        break;
+                            break;
                         
                         case "Together Animation":
-                            animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.together_animation);
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.together_animation);
                             imgLogo.startAnimation(animation);
                             
-                        break;
+                            break;
                         
                         case "Zoom In Animation":
-                            animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.zoom_in_animation);
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.zoom_in_animation);
                             imgLogo.startAnimation(animation);
                             
-                        break;
+                            break;
                         
                         case "Zoom Out Animation":
-                            animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.zoom_out_animation);
+                            animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.zoom_out_animation);
                             imgLogo.startAnimation(animation);
                             
-                        break;
+                            break;
                         
                     }
                     
-                break;
+                    break;
             }
         }
         
-        catch (Exception e)
+        catch(Exception e)
         {
             new AlertDialog.Builder(this)
                     .setTitle("Error")
@@ -141,8 +141,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             System.out.println(selectedAnimation);
             
         }
-    
-        catch (Exception e)
+        
+        catch(Exception e)
         {
             new AlertDialog.Builder(this)
                     .setTitle("Selected Item Error")
